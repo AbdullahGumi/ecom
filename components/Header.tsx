@@ -6,9 +6,9 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import React, { useState } from "react";
 import LeftPane from "./LeftPane";
-
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const Header = () => {
-  const [values, setValues] = React.useState(["English", "Hebrew", "French"]);
+  const [values, _] = React.useState(["English", "Hebrew", "French"]);
   const [selected, setSelected] = useState("English");
 
   function handleChange(event: {
@@ -30,6 +30,8 @@ const Header = () => {
           <Select
             className="border-none"
             value={selected}
+            disableUnderline
+            IconComponent={KeyboardArrowDownIcon}
             onChange={handleChange}
           >
             {values.map((value, index) => {
