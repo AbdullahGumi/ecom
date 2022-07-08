@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-key */
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-const ItemCard = ({ image }) => {
+const ItemCard = ({ image }: any) => {
   const images = [
     <img className="w-full bg-red-400 h-56 " src={image} alt="test" />,
     <img className="w-full h-56 " src={image} alt="test" />,

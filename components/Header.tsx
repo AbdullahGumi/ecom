@@ -26,7 +26,7 @@ const Header = () => {
         />
       </div>
       <div className="flex gap-2 items-center">
-        <FormControl className="border-none">
+        <FormControl className="w-24 hidden sm:block " variant="standard">
           <Select
             className="border-none"
             value={selected}
