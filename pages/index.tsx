@@ -3,6 +3,7 @@ import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
+//components
 import Header from "../components/Header";
 import ProductsAndFilter from "../components/ProductsAndFilter";
 

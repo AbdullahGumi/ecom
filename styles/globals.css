@@ -22,3 +22,8 @@ a {
 .alice-carousel__dots {
 margin: 0px!important;
 }
+
+/* mui drawer opacity */
+.MuiBackdrop-root {
+  opacity: 0.2!important;
+} 

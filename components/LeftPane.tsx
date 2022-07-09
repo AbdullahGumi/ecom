@@ -1,4 +1,6 @@
 import * as React from "react";
+
+//mui
 import Drawer from "@mui/material/Drawer";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -50,6 +52,12 @@ export default function LeftPane() {
           className="hover:cursor-pointer"
         />
         <Drawer
+          // ModalProps={{
+          //   sx: {
+          //     backgroundColor: "transparent",
+          //     opacity: 0,
+          //   },
+          // }}
           anchor={"left"}
           open={state}
           onClose={() => toggleDrawer(false)}

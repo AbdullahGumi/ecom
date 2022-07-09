@@ -1,4 +1,6 @@
 import React from "react";
+
+//mui
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -6,10 +8,15 @@ import Select from "@mui/material/Select";
 import { Button } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
+//redux
+import { useDispatch } from "react-redux";
+import { filterProducts } from "../redux/products/productsSlice";
+
 const Filter = () => {
   const [color, setColor] = React.useState("");
   const [material, setMaterial] = React.useState("");
   const [size, setSize] = React.useState("");
+  const dispatch = useDispatch<any>();
 
   return (
     <div className="flex justify-end">
@@ -59,7 +66,10 @@ const Filter = () => {
             <MenuItem value={"Large"}>Large</MenuItem>
           </Select>
         </FormControl>
-        <Button className="bg-black text-white hover:bg-black h-9 w-36">
+        <Button
+          onClick={() => dispatch(filterProducts({ color, material, size }))}
+          className="bg-black text-white hover:bg-black h-9 w-36"
+        >
           apply filter
         </Button>
       </div>
