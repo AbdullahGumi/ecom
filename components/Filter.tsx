@@ -66,12 +66,12 @@ const Filter = () => {
             <MenuItem value={"Large"}>Large</MenuItem>
           </Select>
         </FormControl>
-        <Button
+        <button
           onClick={() => dispatch(filterProducts({ color, material, size }))}
-          className="bg-black text-white hover:bg-black h-9 w-36"
+          className="uppercase rounded-md bg-black text-white hover:opacity-70 h-9 w-36"
         >
           apply filter
-        </Button>
+        </button>
       </div>
     </div>
   );
